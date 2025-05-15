@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo-img">
+                <img src="logo.png" alt="Logo">
+            </div>
+        </div>
+        <div class="nav-menu"> <!--Menu de navigation-->
+            <a href="#">Accueil</a>
+            <a href="page_quiz.html">Quiz</a>
+            <a href="#">A propos</a>
+            <a href="#">Infos utiles</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <section class="Apropos">
+        <div class="global"> <!---->
+            <div class="title"> 
+                A propos de la santé 
+            </div>
+            <div class="Vitext">
+                <div class="video">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/Q-rz2wUz6gs"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet <br>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet <br>Lorem ipsum dolor sit ametLorem ipsum dolor sit amet <br></p>
+
+                </div>
+
+
+            </div>
+            <!--<section class="video">
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/Q-rz2wUz6gs"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+            </section>-->
+        </div>
+    </section>
+    
+    <div class="main-container">              <!--Section pricipal-->
+        <div class="login-container">         <!--Colonne de connexion-->
+            <div class="login-form">          <!--le formulaire de login-->
+                <h2 class="welcome-text">Bienvenue !</h2>
+                <p class="connect-text">Connectez-vous.</p>
+                
+                <form> <!--créer un formulaire HTML-->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Saisissez votre adresse email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Saisissez votre mot de passe">
+                    </div>
+                    
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-connexion">Connexion</button>
+                </form>
+                
+                <div class="social-login">   
+                    <p class="social-text">Se connecter avec</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">f</a>
+                        <a href="#" class="social-icon twitter">t</a>
+                        <a href="#" class="social-icon google">G</a>
+                    </div>
+                </div>
+                
+                <p class="signup-text">
+                    Vous n'avez pas de compte ? <a href="#" class="signup-link">Inscrivez-vous maintenant!</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <img src="support-image.png" alt="Support" class="support-image">
+        </div>
+    </div>
+</body>
+</html>

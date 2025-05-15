@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/** = sélectionne tous les éléments de la page.
+
+margin: 0; padding: 0; = supprime les marges/paddings par défaut.
+
+box-sizing: border-box; = le padding et la bordure sont inclus dans la taille (width/height).
+
+font-family: Arial, sans-serif; = police globale.*/
+
+body {
+    background-color: #f5f5f5;
+}
+/*Change la couleur de fond de la page en gris très clair.*/
+
+.header {
+    background-color: #ff7f27;
+    padding: 15px;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Fond orange, texte blanc, hauteur 100px.
+
+display: flex = disposition horizontale des enfants.
+
+justify-content: space-between = espace égal entre les éléments.
+
+align-items: center = alignement horizontal centré.*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+/*Encadre le logo avec une bordure grise et un fond clair.*/
+
+.logo-img {
+    border: 2px solid #ccc;
+    padding: 5px;
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    position: relative;
+}
+/*position: relative permet de positionner le badge par rapport à ce bloc.*/
+
+.logo-img img {
+    width: 80px;
+    height: 60px;
+}
+/**/
+
+.logo-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff7f27;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+/*Badge rond orange avec une icône centrée, placé en haut à droite du logo.*/
+
+.nav-menu {
+    display: flex;
+}
+/**/
+
+.nav-menu a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+/*Les liens sont placés horizontalement et espacés.
+
+Texte gris, sans soulignement.*/
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+/*display: flex = login à gauche, image à droite.
+
+height: calc(100vh - 100px) = pleine hauteur de l’écran moins la hauteur du header.*/
+
+.login-container {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*Zone blanche centrée verticalement et horizontalement.*/
+
+.login-form {
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+}
+/*Largeur fluide mais ne dépasse jamais 450px.*/
+
+.welcome-text {
+    color: #4cb5f5;
+    margin-bottom: 5px;
+}
+/*Bienvenue en bleu clair, texte "connectez-vous" en gris.*/
+
+.connect-text {
+    color: #888;
+    margin-bottom: 20px;
+}
+/*Bienvenue en bleu clair, texte "connectez-vous" en gris.*/
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+/*Style propre des champs (label + input).*/
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+/*Style propre des champs (label + input).*/
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/*Style propre des champs (label + input).*/
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/*Checkbox à gauche, lien à droite, bien espacés.*/
+
+.remember-me input {
+    margin-right: 5px;
+}
+/*Checkbox à gauche, lien à droite, bien espacés.*/
+
+.forgot-password {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/*Checkbox à gauche, lien à droite, bien espacés.*/
+
+.btn-connexion {
+    background-color: #4cb5f5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+/*Bouton bleu clair, texte blanc, coins arrondis, clic interactif.
+*/
+
+.social-login {
+    margin-top: 20px;
+}
+/*Icônes des réseaux sociales : cercles colorés avec du texte centré.*/
+
+.social-text {
+    color: #888;
+    margin-bottom: 10px;
+}
+/*Icônes des réseaux sociales : cercles colorés avec du texte centré.*/
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/*Icônes des réseaux sociales : cercles colorés avec du texte centré.*/
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+/*Icônes des réseaux sociales : cercles colorés avec du texte centré.*/
+
+.facebook {
+    background-color: #1877f2;
+}
+/*Couleurs spécifiques à chaque réseau social.*/
+
+.twitter {
+    background-color: #1da1f2;
+}
+/*Couleurs spécifiques à chaque réseau social.*/
+
+.google {
+    background-color: #ea4335;
+}
+/*Couleurs spécifiques à chaque réseau social.*/
+
+.signup-text {
+    margin-top: 20px;
+    color: #888;
+}
+/*Texte en bas avec lien bleu "Inscrivez-vous".*/
+
+.signup-link {
+    color: #4cb5f5;
+    text-decoration: none;
+}
+/*Texte en bas avec lien bleu "Inscrivez-vous".*/
+
+.image-container {
+    flex: 1;
+    background-color: #034694;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Fond bleu foncé, image centrée et responsive (60% max).*/
+
+.support-image {
+    max-width: 60%;
+    max-height: 60%;
+}
+/*Fond bleu foncé, image centrée et responsive (60% max).*/
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        display: none;
+    }
+}
+/*Quand l’écran est petit :
+
+Les deux colonnes (login + image) deviennent verticales.
+
+L’image disparaît (mobile friendly).*/
+
+.Apropos{
+    background-color: #940311;
+    width: 1920px;
+    height: 600px;
+}
+.global{
+    display: grid;
+    text-align: center;
+}
+.Vitext{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}

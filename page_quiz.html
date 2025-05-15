@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="page_connexion.html">Acceuil</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Infos utiles</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-step active">   
+            <div class="step-number">1</div>
+            <div class="step-label">Personnalité</div>
+        </div>
+
+        <!--Cette portion de code HTML crée un bloc de progression
+        (étape d’un processus) nommé "Personnalité", marqué comme actif (class="progress-step active"),
+        avec un numéro d'étape "1" (step-number) et un libellé "Personnalité" (step-label).-->
+
+        <div class="progress-step">
+            <div class="step-number">2</div>
+            <div class="step-label">Santé</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">3</div>
+            <div class="step-label">Compétences, Expérience et Formation</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">4</div>
+            <div class="step-label">Approche de l'entreprenariat</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">5</div>
+            <div class="step-label">Approche Technique</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">6</div>
+            <div class="step-label">Note</div>
+        </div><!---->
+    </div>
+
+    <div class="content">
+        <div class="progress-indicator">
+            <div class="progress-line"></div>
+        </div> <!---Cette div représente la barre de progression elle-même.-->
+
+        <div class="question-container"> <!---->
+            <h2 class="question-title">Question 1</h2>
+            <p class="question-text">
+                Revenez sur l'année dernière, avez-vous commencé et terminé un de vos différents projets?
+            </p>
+            <p class="question-subtext">
+                Un projet peut être par exemple, construire, réparer ou fabriquer quelque chose, écrire un livre, aller en formation continue...
+            </p>
+        </div>
+
+        <div class="answer-options">
+            <label class="answer-option">
+                <input type="radio" name="question1" value="option1">
+                <span class="option-text">commencé et terminé un certain nombre de projets</span>
+            </label>
+
+            <!--Ce code affiche une étape active de progression avec le numéro 1 et le titre "Personnalité", 
+            pour montrer que c’est la première étape d’un processus ou d’un formulaire.-->
+
+            <label class="answer-option">
+                <input type="radio" name="question1" value="option2">
+                <span class="option-text">commencé beaucoup de choses mais en ai terminé très peu</span>
+            </label>
+            <label class="answer-option">
+                <input type="radio" name="question1" value="option3" >
+                <span class="option-text">n'ai pas fait grand-chose pour moi mais beaucoup pour les autres</span>
+            </label>
+            <label class="answer-option">
+                <input type="radio" name="question1" value="option4" checked>
+                <span class="option-text">été beaucoup trop occupé pour m'occuper de mes propres affaires</span>
+            </label>
+        </div>
+
+        <div class="navigation">
+            <button class="next-button" onclick="window.location.href='suivi_patient.html'">Suivant</button>
+            <div class="page-counter">1/26</div>
+        </div>
+
+        <!--un bouton "Suivant" qui redirige vers la page suivi_patient.html quand on clique dessus,
+        et un compteur de pages affichant "1/26" pour indiquer qu'on est à la page 1 sur 26.-->
+
+    </div>
+</body>
+</html>

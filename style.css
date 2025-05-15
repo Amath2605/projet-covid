@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/** : sélectionne tous les éléments HTML.
+
+margin: 0 et padding: 0 : supprime les marges et paddings par défaut des navigateurs.
+
+box-sizing: border-box : inclut les bordures et paddings dans le calcul des dimensions.
+
+font-family : applique la police Arial à toute la page.*/
+
+body {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/*Corps de la page avec fond blanc.
+
+Largeur maximale de 1200px, centrée avec margin: 0 auto.
+
+Ajoute un espace intérieur de 20px tout autour.*/
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+/*Utilise Flexbox pour disposer les éléments horizontalement.
+
+Espace égal entre le logo et le menu (justify-content: space-between).
+
+Aligne verticalement les éléments au centre.*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+/*Le logo est aligné verticalement et redimensionné proportionnellement à 150px de largeur.*/
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+/*Le logo est aligné verticalement et redimensionné proportionnellement à 150px de largeur.*/
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+/*Menu horizontal sans puces.*/
+
+.menu li {
+    margin-left: 20px;
+}
+/*Espacement de 20px entre les liens.*/
+
+.menu a {
+    text-decoration: none;
+    color: #777;
+}
+/*Style épuré (liens gris et sans soulignement).*/
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f3f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+}
+/*Barre horizontale contenant les étapes du quiz.
+
+Fond clair, coins arrondis, marges verticales de 30px.*/
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 16%;
+}
+/*Chaque étape est une colonne (titre + numéro).
+
+width: 16% répartit les 6 étapes également.*/
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/*Cercle numéroté pour chaque étape, gris par défaut.*/
+
+.active .step-number {
+    background-color: #4a6fbc;
+}
+/*Étape active : cercle bleu au lieu de gris.*/
+
+.step-label {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.2;
+}
+/*Texte sous le numéro de l'étape.*/
+
+/* Content */
+.content {
+    margin-top: 60px;
+    position: relative;
+}
+/*Contenu démarre après un espace de 60px.*/
+
+.progress-indicator {
+    text-align: center;
+    margin-bottom: 40px;
+}
+/*Ligne de progression orange centrée (barre de chargement).*/
+
+.progress-line {
+    height: 4px;
+    width: 30%;
+    background-color: #ff7f27;
+    margin: 0 auto;
+}
+/*Ligne de progression orange centrée (barre de chargement).*/
+
+.question-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*Bloc de la question : titre bleu, texte principal et sous-texte.*/
+
+.question-title {
+    color: #2c5986;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+/*Bloc de la question : titre bleu, texte principal et sous-texte.*/
+
+.question-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/*Bloc de la question : titre bleu, texte principal et sous-texte.*/
+
+.question-subtext {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/*Bloc de la question : titre bleu, texte principal et sous-texte.*/
+
+/* Answer Options */
+.answer-options {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff7f27;
+    border-radius: 15px;
+    padding: 20px 10px;
+    margin-bottom: 40px;
+}
+/*Conteneur des réponses, fond orange, coins arrondis, espacement entre les réponses.*/
+
+.answer-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 24%;
+    color: white;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+/*Chaque réponse est une colonne cliquable, blanche sur fond orange.*/
+
+.answer-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+/*Bouton radio stylisé : cercle blanc sans style natif.*/
+
+.answer-option input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+/*Lorsque coché : un cercle blanc intérieur apparaît au centre.*/
+
+.option-text {
+    font-size: 14px;
+    line-height: 1.3;
+}
+/*Texte descriptif de l'option.*/
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+/*Bouton “Suivant” bleu avec compteur de page à côté (ex. : 1/26).*/
+
+.next-button {
+    background-color: #005195;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*Bouton “Suivant” bleu avec compteur de page à côté (ex. : 1/26).*/
+
+.page-counter {
+    background-color: #005195;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    margin-left: 1px;
+}
+/*Bouton “Suivant” bleu avec compteur de page à côté (ex. : 1/26).*/
+
+/* Responsive */
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-wrap: wrap;
+    }
+    
+    .progress-step {
+        width: 33%;
+        margin-bottom: 15px;
+    }
+    
+    .answer-options {
+        flex-direction: column;
+    }
+    
+    .answer-option {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+/*Lorsque l’écran est petit (mobile) :
+
+La barre de progression passe à deux lignes (3 étapes par ligne).
+
+Les options de réponses deviennent verticales.
+
+Chaque option prend 100% de la largeur.
+
+*/
